@@ -73,7 +73,7 @@ int main(){
 
 }//Fim main
 
-int i; //Itera??o for
+int i; //IteraÃ§Ã£o for
 
 
 
@@ -102,7 +102,7 @@ void cadastro (void){
     FILE *pontCadCpf;
     pontCadCpf = fopen ("cpf.txt","a");
     rCpf:
-    printf("\nDigite os 11 numeros do cpf sem ponto e traço\n");
+    printf("\nDigite os 11 numeros do cpf sem ponto e traÃ§o\n");
     printf("\nCPF: ");
     fflush(stdin);
     gets(cadCpf.cpfC);
@@ -113,7 +113,7 @@ void cadastro (void){
 
     for(i=0; i<cadCpf.cpfC[i]; i++) {
         if(!(cadCpf.cpfC[i]>='0' && cadCpf.cpfC[i]<='9' && strlen(cadCpf.cpfC)==11)){
-            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se não excedeu ou não atingiu a quantidade permitida***\n");
+            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se nÃ£o excedeu ou nÃ£o atingiu a quantidade permitida***\n");
                 goto rCpf;
             break;
         }
@@ -128,7 +128,7 @@ void cadastro (void){
         consulta = fopen ("cpf.txt","r");
         while((fscanf(consulta,"%s",&login)) !=EOF){
                 if (strcmp(cadCpf.cpfC,login ) == 0){
-                    printf("\n\n***J? consta no sistema um cadastro com esse numero de cpf***\n");
+                    printf("\n\n***JÃ¡ consta no sistema um cadastro com esse numero de cpf***\n");
                     goto rCpf;
                     fclose(consulta);
                     break;
@@ -138,7 +138,7 @@ void cadastro (void){
             fclose(pontCadCpf);
 
     rNome:
-    printf("\n?NOME: ");
+    printf("\nNOME: ");
     gets(dados.nome);
 
      if(strlen(dados.nome) == 0){
@@ -164,7 +164,7 @@ void cadastro (void){
 //fim for
     printf("---------------------------------------------------");
 
-    printf("\n?DATA DE NASCIMENTO");
+    printf("\nDATA DE NASCIMENTO");
     rDiaNascimento:
     printf("\n    =>DIA dd : ");
     fflush(stdin);
@@ -179,7 +179,7 @@ void cadastro (void){
 
     for(i=0; i<dados.diaC[i]; i++) {
         if(!(dados.diaC[i]>='0' && dados.diaC[i]<='9' && strlen(dados.diaC)==2)){
-            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se não excedeu ou não atingiu a quantidade permitida***\n");
+            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se nÃ£o excedeu ou nÃ£o atingiu a quantidade permitida***\n");
                 goto rDiaNascimento;
             break;
         }
@@ -188,7 +188,7 @@ void cadastro (void){
         }
     }
     rMesNascimento:
-    printf("          =>MÊS mm : ");
+    printf("          =>MÃŠS mm : ");
     fflush(stdin);
     gets(dados.mesC);
 
@@ -198,7 +198,7 @@ void cadastro (void){
 
     for(i=0; i<dados.mesC[i]; i++) {
         if(!(dados.mesC[i]>='0' && dados.mesC[i]<='9' && strlen(dados.mesC)==2)){
-            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se não excedeu ou não atingiu a quantidade permitida\n***");
+            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se nÃ£o excedeu ou nÃ£o atingiu a quantidade permitida\n***");
                 goto rMesNascimento;
             break;
         }
@@ -219,7 +219,7 @@ void cadastro (void){
     printf("---------------------------------------------------");
     for(i=0; i<dados.anoC[i]; i++) {
         if(!(dados.anoC[i]>='0' && dados.anoC[i]<='9' && strlen(dados.anoC)==4)){
-            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se não excedeu ou não atingiu a quantidade permitida\n***");
+            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se nÃ£o excedeu ou nÃ£o atingiu a quantidade permitida\n***");
                 goto rAnoNascimento;
             break;
         }
@@ -240,10 +240,10 @@ void cadastro (void){
     }
 
     rTelefone:
-    printf("\n\n?NUMERO DE TELEFONE\n\n");
+    printf("\n\nNUMERO DE TELEFONE\n\n");
     printf("***Cadastre ate dois numeros de telefone\n");
     printf("Digite os numeros todos juntos XXXX...\n\n");
-    printf("INFORME O Nº DE TELEFONE PRINCIPAL: ");
+    printf("INFORME O NÂº DE TELEFONE PRINCIPAL: ");
     fflush(stdin);
     gets(dados.telefoneC);
     printf("---------------------------------------------------");
@@ -264,7 +264,7 @@ void cadastro (void){
     }
 
     rTelefone2:
-    printf("\n\nINFORME O Nº DE TELEFONE 2: ");
+    printf("\n\nINFORME O NÂº DE TELEFONE 2: ");
     fflush(stdin);
     gets(dados.telefone2C);
 
@@ -284,7 +284,7 @@ void cadastro (void){
     }
     system("cls");
     printf("---------------------------------------------------");
-    printf("\nDATA DO DIAGNÓSTICO DE COVID 19");
+    printf("\nDATA DO DIAGNÃ“STICO DE COVID 19");
     rDiaMorb:
     printf("\n   =>DIA dd: ");
     fflush(stdin);
@@ -296,7 +296,7 @@ void cadastro (void){
 
     for(i=0; i<data.diaC[i]; i++) {
         if(!(data.diaC[i]>='0' && data.diaC[i]<='9' && strlen(data.diaC)==2)){
-            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se não excedeu ou não atingiu a quantidade permitida\n***");
+            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se nÃ£o excedeu ou nÃ£o atingiu a quantidade permitida\n***");
                 goto rDiaMorb;
             break;
         }
@@ -305,7 +305,7 @@ void cadastro (void){
         }
     }
     rMesMorb:
-    printf("\n        =>MÊS mm: ");
+    printf("\n        =>MÃŠS mm: ");
     fflush(stdin);
     gets(data.mesC);
 
@@ -316,7 +316,7 @@ void cadastro (void){
 
         for(i=0; i<data.mesC[i]; i++) {
         if(!(data.mesC[i]>='0' && data.mesC[i]<='9' && strlen(data.mesC)==2)){
-            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se não excedeu ou não atingiu a quantidade permitida\n***");
+            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se nÃ£o excedeu ou nÃ£o atingiu a quantidade permitida\n***");
                 goto rMesMorb;
             break;
         }
@@ -336,7 +336,7 @@ void cadastro (void){
 
     for(i=0; i<data.anoC[i]; i++) {
         if(!(data.anoC[i]>='0' && data.anoC[i]<='9' && strlen(data.anoC)==4)){
-            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se não excedeu ou não atingiu a quantidade permitida\n***");
+            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se nÃ£o excedeu ou nÃ£o atingiu a quantidade permitida\n***");
                 goto rAnoMorb;
             break;
         }
@@ -346,7 +346,7 @@ void cadastro (void){
     }
     system("cls");
     printf("---------------------------------------------------");
-    printf("\n\n?Dados de Endereço\n\n");
+    printf("\n\n?Dados de EndereÃ§o\n\n");
 
     rCep:
     printf("\CEP: ");
@@ -359,7 +359,7 @@ void cadastro (void){
 
     for(i=0; i<dados.cepC[i]; i++) {
         if(!(dados.cepC[i]>='0' && dados.cepC[i]<='9'&&strlen(dados.cepC)<9)){
-            printf("\n******Invalido. \nVerifique se digitou apenas numeros \n e se não excedeu ou não atingiu a quantidade permitida\nDigite os 8 numeros do CEP***");
+            printf("\n******Invalido. \nVerifique se digitou apenas numeros \n e se nÃ£o excedeu ou nÃ£o atingiu a quantidade permitida\nDigite os 8 numeros do CEP***");
                 goto rCep;
             break;
         }
@@ -391,7 +391,7 @@ void cadastro (void){
     printf("---------------------------------------------------");
     for(i=0; i<dados.numeroC[i]; i++) {
         if(!(dados.numeroC[i]>='0' && dados.numeroC[i]<='9'&& strlen(dados.numeroC)<11)){
-            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se n?o excedeu ou não atingiu a quantidade permitida\n***");
+            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se nÃ£o excedeu ou nÃ£o atingiu a quantidade permitida\n***");
                 goto rNumero;
             break;
         }
@@ -476,7 +476,7 @@ void cadastro (void){
                 }
 }
 //fim for
-    int opMorb; //Op??o referente caso o paciente tenha algum tipo de morbidade
+    int opMorb; //OpÃ§Ã£o referente caso o paciente tenha algum tipo de morbidade
     char opMorbC[3]; //Validado
 
     retornMorb : //retorna cadastro de morbidade
@@ -484,9 +484,9 @@ void cadastro (void){
     printf("  -------------------------------------------------");
     printf("\n  -O paciente possui algum tipo de morbidade?     -");
     printf("\n  -[1]SIM                                         -");
-    printf("\n  -[2]N?O                                         -\n");
+    printf("\n  -[2]NÃƒO                                         -\n");
     printf("  -------------------------------------------------");
-    printf("\nEscolha a opção dejesada: ");
+    printf("\nEscolha a opÃ§Ã£o dejesada: ");
     fflush(stdin);
     gets(opMorbC); //op morbidade
 
@@ -496,7 +496,7 @@ void cadastro (void){
             break;
         }
         else{
-            printf("Opção invalida");
+            printf("OpÃ§Ã£o invalida");
             break;
         }
 
@@ -565,10 +565,10 @@ void cadLogin(void){
 
     printf("\n                   ***************************************************");
     printf("\n                   *               [1]LOGAR NO SISTEMA               *");
-    printf("\n                   *          [2]CADASTRAR USU?RIO E SENHA           *");
+    printf("\n                   *          [2]CADASTRAR USUÃRIO E SENHA           *");
     printf("\n                   *                    [0]SAIR                      *");
     printf("\n                   ***************************************************");
-    printf("\n\n  Digite o n?mero da opção:    ");
+    printf("\n\n  Digite o numero da opÃ§Ã£o:    ");
     fflush(stdin);
     gets(opCadLoginC);
     for(i=0; i<opCadLoginC[i];i++){
@@ -577,7 +577,7 @@ void cadLogin(void){
             break;
         }
         else{
-            printf("Opção invalida");
+            printf("OpÃ§Ã£o invalida");
             break;
         }
 
@@ -642,7 +642,7 @@ void cadLogin(void){
                     break;
         }
         system("cls");
-        printf("\n  (Usu?rio e/ou senha incorreto)\n");
+        printf("\n  (Usuario e/ou senha incorreto)\n");
         printf("\n  (Tente novamente!)\n");
         printf("\n  Pressione enter para retornar a tela inical...");
         Beep(565,2000);
@@ -664,7 +664,7 @@ fclose(logar);
         }
 
         struct user userPass; //STRUCT USUARIO E SENHA
-        printf("  \n             CADASTRO DE USU?RIO E SENHA            ");
+        printf("  \n             CADASTRO DE USUÃRIO E SENHA            ");
         printf("\n\n  ---------------------------------------------------\n");
         rUser:
         printf("\n  USUARIO: ");
@@ -691,7 +691,7 @@ fclose(logar);
         fprintf(cadastrar, "\n%s", userPass.user);
         fprintf(cadastrar, "\n%s", userPass.password);
 
-        printf("  USU?RIO E SENHA CADASTRADO COM SUCESSO\n");
+        printf("  USUARIO E SENHA CADASTRADO COM SUCESSO\n");
         printf("\n  Pressione enter para retornar a tela inical...");
         scanf("ENTER");
         system("cls");
@@ -705,7 +705,7 @@ fclose(logar);
             break;
 
     default :
-        printf("\n***Opção Inv?lida***\n\n");
+        printf("\n***OpÃ§Ã£o Invalida***\n\n");
         return cadLogin();
         break;
     }
@@ -719,7 +719,7 @@ void menu(void) {
     printf("\n  -[1]CADASTRAR PACIENTES                           -");
     printf("\n  -[2]Voltar ao menu inicial                        -");
     printf("\n  ---------------------------------------------------");
-    printf("\n   Digite o número da opção:   ");
+    printf("\n   Digite o numero da opÃ§Ã£o:   ");
     fflush(stdin);
     gets(opMenuC);
     for(i=0; i<opMenuC[i];i++){
@@ -728,7 +728,7 @@ void menu(void) {
             break;
         }
         else{
-            printf("Opção inv?lida");
+            printf("OpÃ§Ã£o invalida");
             break;
         }
 
@@ -742,9 +742,9 @@ void menu(void) {
             printf("\n  ---------------------------------------------------");
             printf("\n  -Deseja realizar um novo cadastro?                -");
             printf("\n  -[1]SIM                                           -");
-            printf("\n  -[2]N?O                                           -");
+            printf("\n  -[2]NÃƒO                                           -");
             printf("\n  ---------------------------------------------------");
-            printf("\n Digite o n?mero da opção:   ");
+            printf("\n Digite o numero da opÃ§Ã£o:   ");
             fflush(stdin);
             gets(opCadastroC);
 
@@ -754,7 +754,7 @@ void menu(void) {
             break;
         }
         else{
-            printf("Opção inválida");
+            printf("OpÃ§Ã£o invalida");
             break;
         }
 
@@ -773,7 +773,7 @@ void menu(void) {
             cadLogin();
             break;
 
-            default : printf("\n\nOpcão Invalida");
+            default : printf("\n\nOpÃ§Ã£o Invalida");
             return cadLogin();
             break;
     }
