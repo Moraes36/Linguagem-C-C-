@@ -73,7 +73,7 @@ int main(){
 
 }//Fim main
 
-int i; //Itera??o for
+int i; //Iteração for
 
 
 
@@ -128,7 +128,7 @@ void cadastro (void){
         consulta = fopen ("cpf.txt","r");
         while((fscanf(consulta,"%s",&login)) !=EOF){
                 if (strcmp(cadCpf.cpfC,login ) == 0){
-                    printf("\n\n***J? consta no sistema um cadastro com esse numero de cpf***\n");
+                    printf("\n\n***Já consta no sistema um cadastro com esse numero de cpf***\n");
                     goto rCpf;
                     fclose(consulta);
                     break;
@@ -164,7 +164,7 @@ void cadastro (void){
 //fim for
     printf("---------------------------------------------------");
 
-    printf("\n?DATA DE NASCIMENTO");
+    printf("\nDATA DE NASCIMENTO");
     rDiaNascimento:
     printf("\n    =>DIA dd : ");
     fflush(stdin);
@@ -240,7 +240,7 @@ void cadastro (void){
     }
 
     rTelefone:
-    printf("\n\n?NUMERO DE TELEFONE\n\n");
+    printf("\n\nNUMERO DE TELEFONE\n\n");
     printf("***Cadastre ate dois numeros de telefone\n");
     printf("Digite os numeros todos juntos XXXX...\n\n");
     printf("INFORME O Nº DE TELEFONE PRINCIPAL: ");
@@ -346,7 +346,7 @@ void cadastro (void){
     }
     system("cls");
     printf("---------------------------------------------------");
-    printf("\n\n?Dados de Endereço\n\n");
+    printf("\n\nDados de Endereço\n\n");
 
     rCep:
     printf("\CEP: ");
@@ -391,7 +391,7 @@ void cadastro (void){
     printf("---------------------------------------------------");
     for(i=0; i<dados.numeroC[i]; i++) {
         if(!(dados.numeroC[i]>='0' && dados.numeroC[i]<='9'&& strlen(dados.numeroC)<11)){
-            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se n?o excedeu ou não atingiu a quantidade permitida\n***");
+            printf("\n***Invalido. \nVerifique se digitou apenas numeros \n e se não excedeu ou não atingiu a quantidade permitida\n***");
                 goto rNumero;
             break;
         }
@@ -515,7 +515,7 @@ void cadastro (void){
 
     printf("\n\nDADOS CADASTRADOS COM SUCESSO!\n\n");
 
-    int idade = 2020 - dados.ano; //ano dignostico - ano idade
+    int idade = 2022 - dados.ano; //ano dignostico - ano idade
 
     if (idade >= 65) {
             fprintf(ponteiro1, "\nIDADE: %d",idade);
@@ -565,10 +565,10 @@ void cadLogin(void){
 
     printf("\n                   ***************************************************");
     printf("\n                   *               [1]LOGAR NO SISTEMA               *");
-    printf("\n                   *          [2]CADASTRAR USU?RIO E SENHA           *");
+    printf("\n                   *          [2]CADASTRAR USUARIO E SENHA           *");
     printf("\n                   *                    [0]SAIR                      *");
     printf("\n                   ***************************************************");
-    printf("\n\n  Digite o n?mero da opção:    ");
+    printf("\n\n  Digite o numero da opção:    ");
     fflush(stdin);
     gets(opCadLoginC);
     for(i=0; i<opCadLoginC[i];i++){
@@ -642,7 +642,7 @@ void cadLogin(void){
                     break;
         }
         system("cls");
-        printf("\n  (Usu?rio e/ou senha incorreto)\n");
+        printf("\n  (Usuario e/ou senha incorreto)\n");
         printf("\n  (Tente novamente!)\n");
         printf("\n  Pressione enter para retornar a tela inical...");
         Beep(565,2000);
@@ -664,7 +664,7 @@ fclose(logar);
         }
 
         struct user userPass; //STRUCT USUARIO E SENHA
-        printf("  \n             CADASTRO DE USU?RIO E SENHA            ");
+        printf("  \n             CADASTRO DE USUARIO E SENHA            ");
         printf("\n\n  ---------------------------------------------------\n");
         rUser:
         printf("\n  USUARIO: ");
@@ -691,7 +691,7 @@ fclose(logar);
         fprintf(cadastrar, "\n%s", userPass.user);
         fprintf(cadastrar, "\n%s", userPass.password);
 
-        printf("  USU?RIO E SENHA CADASTRADO COM SUCESSO\n");
+        printf("  USUARIO E SENHA CADASTRADO COM SUCESSO\n");
         printf("\n  Pressione enter para retornar a tela inical...");
         scanf("ENTER");
         system("cls");
@@ -705,7 +705,7 @@ fclose(logar);
             break;
 
     default :
-        printf("\n***Opção Inv?lida***\n\n");
+        printf("\n***Opção Invalida***\n\n");
         return cadLogin();
         break;
     }
@@ -728,7 +728,7 @@ void menu(void) {
             break;
         }
         else{
-            printf("Opção inv?lida");
+            printf("Opção invalida");
             break;
         }
 
@@ -742,9 +742,9 @@ void menu(void) {
             printf("\n  ---------------------------------------------------");
             printf("\n  -Deseja realizar um novo cadastro?                -");
             printf("\n  -[1]SIM                                           -");
-            printf("\n  -[2]N?O                                           -");
+            printf("\n  -[2]NÃO                                           -");
             printf("\n  ---------------------------------------------------");
-            printf("\n Digite o n?mero da opção:   ");
+            printf("\n Digite o numero da opção:   ");
             fflush(stdin);
             gets(opCadastroC);
 
